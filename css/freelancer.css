@@ -531,7 +531,7 @@ fieldset[disabled] .btn-success.active {
 	background:url("../img/city2.png");
 }
 #dare{
-	background:url("dare1.jpg");
+	background-image:url("dare1.jpg");
 }
 #roadtripback{
 	background:url("../img/portfolio/minemine.jpg");
