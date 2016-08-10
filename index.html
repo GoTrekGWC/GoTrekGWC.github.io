@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>gØTrek</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/freelancer.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <button class="btn btn-primary lg-12" id="btnIndex"><a class="navbar-brand" href="index.html">GØTREK</button></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+						 <ul class="nav navbar-nav">
+							<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Categories<span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="other.html">Rainy Day</a></li>
+									<li><a href="active.html">Active</a></li>
+									<li><a href="testoutandabout.html">Out and About</a></li>
+									<li><a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">Road Trip</a></li>
+									<li> <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">Dare</a></li>
+								</ul>
+							</li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="contact.html">Contact</a></li>
+							<li><a href="forum.html">Forum</a></li>
+						</ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <img class="img-responsive" src="img/goTreklogo.PNG" alt="">
+                    <div class="intro-text">
+                        <span class="name">Endless Adventure</span>
+                        <hr class="star-light">
+                        <span class="skills">gØTrek's mission is to supply individuals with knowledge about activites in their community and ideas that they can pursue on their own. gØTrek consists of 5 categories that are sure to ward off boredom and inspire users to do something they may have never done before. Enjoy exploring the unique activities that gØTrek has to offer!</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Portfolio Grid Section -->
+    <section id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center" id="categories">
+                    <h2>Categories</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 portfolio-item">
+                    <a href="other.html" class="portfolio-link">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i>Rainy Day</i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/rainyday.jpg" class="img-responsive" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                    <a href="active.html" class="portfolio-link" >
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i>Active</i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/active.jpg" class="img-responsive" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                    <a href="testoutandabout.html" class="portfolio-link">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i>Out and About</i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/outandabout.jpg" class="img-responsive" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+                        <div class="caption" id="dare">
+                            <div class="caption-content">
+                                <i>Dare</i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/skydiving.jpg" class="img-responsive" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+                        <div class="caption" id="roadtrip">
+                            <div class="caption-content">
+                                <i>Road Trip</i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/roadtrip.jpg" class="img-responsive" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/submarine.png" class="img-responsive" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row" id="center-this">
+                    <div class="footer-col col-md-4" id="center-this">
+                        <h3>Around the Web</h3>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; MAAS 2016
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+    <!-- Portfolio Modals -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                           <h2>Rainy Day</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/rainyday.jpg" class="img-responsive img-centered" alt="">
+                            <p>Click below for activities for a rainy day!</p>
+                            <ul class="list-inline item-details">
+                                
+                                <strong id = "diypage" class = "diypage"><a href = "other.html">DIYs and Arts & Crafts!</a>
+                                </strong>
+                                <p></p>
+                                <strong><a href="other.html">Baking/Food</a>
+                                </strong>
+                                <p></p>
+                                <strong><a href="other.html">Other</a>
+                                </strong>
+								<p></p>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Project Title</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/cake.png" class="img-responsive img-centered" alt="">
+                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                            <ul class="list-inline item-details">
+                                <li>Client:
+                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong><a href="http://startbootstrap.com">April 2014</a>
+                                    </strong>
+                                </li>
+                                <li>Service:
+                                    <strong><a href="http://startbootstrap.com">Web Development</a>
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Project Title</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/circus.png" class="img-responsive img-centered" alt="">
+                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                            <ul class="list-inline item-details">
+                                <li>Client:
+                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong><a href="http://startbootstrap.com">April 2014</a>
+                                    </strong>
+                                </li>
+                                <li>Service:
+                                    <strong><a href="http://startbootstrap.com">Web Development</a>
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content" id="dare">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container" id="moveContainer">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body" id="modalMove">
+                            <h2 id="trip">DARE</h2>
+                            <hr class="star-primary">
+							<p id="generator">Click the button below to generate new dares!</p>
+							<p id="generator"></p>
+							<script>
+							function GetValue()
+							{
+								var dares= new Array ('Name all of Santa\'s reindeer','Go stargazing', 'Give a stranger a hug', 'Compliment a stranger', 'Pretend the pet is your crush and ask it out', 'Imitate a chicken and a horse at the same time', 'Light a candle', 'Imitate a monkey and a donkey at the same time', 'Gently blow in the ear of the person next to you', 'Call your parents and ask if they believe in aliens', 'Take a selfie with someone with the same eye color as you', 'Draw a face on your belly button', 'Call your friend and explain monopoly to them', 'Name the seven dwarfs', 'Eat a mouthful of crackers and then try to whistle', 'Build a tower out of anything you can find until it is taller then you are', 'Do five cartwheels in a row', 'Try to do a handstand', 'Do the fluffy bunny challenge', 'Do the yoga challenge!', 'Download Geocache and go geocaching near you!', 'Grab some soda and have a burping competition', 'Talk backward for a minute', 'Make a poem using the words orange and moose', 'Lick the floor', 'Go out and make a new friend', 'Roll on the floor for two minutes', 'Attempt to lick you elbow while singing the abc’s', 'Call an unknown number and say, “I love you”', 'Go to a pet store and ask to hold one of the animals', 'Check if you have Morton’s Toe', 'Play ding-dong ditch', 'Suck your finger for 30 seconds', 'Eat ketchup', 'Try another category of goTrek', 'If you have a scooter, pull it out and scooter up and down your driveway', 'Try to find the end of the rainbow', 'Collect all the old clothes you have and find a place to donate them', 'Attempt to say the alphabet backwards, then master saying the alphabet backwards', 'If you have a dog, teach it a new trick', 'Take an unflattering picture and send it to the last person you texted', 'Burn an old sock in the sink', 'Try to juggle', 'Call on Bloody Mary three times in a dark room in front of a mirror', 'Look-up at the sky and hum for a minute', 'Do 25 jumping jacks');
+								var random = dares[Math.floor(Math.random() * dares.length)];
+								document.getElementById("generator").innerHTML=random;
+							}
+							</script>
+							<button type="button" id="btnSearch" class="btn btn-default" value="Search" onclick="GetValue();"/></i>Dare</button><p id="message" ></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content" id="roadtripback">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2 id="trip">Road Trip</h2>
+                            <hr class="star-primary">
+                            <p id="generator2">Click the button below for road trip games and activities!</p>
+							<p id="generator2"></p>
+							<script>
+							function GetValue2()
+							{
+								var roadtrip= new Array ('Play Concentration-64', 'Listen to throw back songs!', 'Play I-Spy', 'Play Word Chain', 'Play 21 questions',  'Play While You Were Sleeping<br>Rules:<br> 1. A person must fall asleep, and after 5 minutes <br>of slumber the game may begin.<br> 2. Start a story, each person takes turns adding to it.<br> 3. Once the passaenger wakes up, you have to<br> convince them to believe the story.', 'Play Alphabet Categories<br>Rules:<br>1. Start with any category you like<br>2. Then, starting with A, travel down the <br>aplhabet naming things in that category!', 'You have 30 seconds to come up with as many songs as you can with the word "Love" in it.<br>After the 30 seconds, one person starts, and singss one of their songs. Continue to go around so that everyone sings.<br>You CANNOT repeat a song, who ever lasts the longest without repeating a song wins!');
+								var random = roadtrip[Math.floor(Math.random() * roadtrip.length)];
+								document.getElementById("generator2").innerHTML=random;
+							}
+							</script>
+							<button type="button" id="btnSearch" class="btn btn-default" value="Search" onclick="GetValue2();"/></i>Again</button><p id="message" ></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Project Title</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/submarine.png" class="img-responsive img-centered" alt="">
+                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                            <ul class="list-inline item-details">
+                                <li>Client:
+                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong><a href="http://startbootstrap.com">April 2014</a>
+                                    </strong>
+                                </li>
+                                <li>Service:
+                                    <strong><a href="http://startbootstrap.com">Web Development</a>
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/freelancer.min.js"></script>
+
+</body>
+
+</html>
