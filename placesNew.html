@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+  <title>Places to Go</title> 
+  <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+	<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/freelancer.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+     #map {
+        width: 100%;
+        height: 900px;
+      }
+    </style>
+</head> 
+<body id="page-top" class="index">
+<div id="fb-root"></div>
+<div id="fb-root"></div>
+
+<!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <button class="btn btn-primary lg-12" id="btnIndex"><a class="navbar-brand" href="index.html">GØTREK</button></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+						 <ul class="nav navbar-nav">
+							<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Categories<span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="other.html">Rainy Day</a></li>
+									<li><a href="index.html">Active</a></li>
+									<li><a href="Out&About.html">Out and About</a></li>
+									<li><a href="index.html#portfolio">Road Trip</a></li>
+									<li><a href="index.html#portfolio">Dare</a></li>
+								</ul>
+							</li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="forum.html">Forum</a></li>
+						</ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <img class="img-responsive" src="suitcase.png" alt="Suitcase" style="width:300px;height:300px;">
+                    <div class="intro-text">
+                        <span class="name">Places to go</span>
+                        <hr class="star-light">
+                        <span class="skills">gØTrek's favorite locations</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+<!-- Map -->
+  <div id="map"></div>
+  
+  <script>
+    // Define your locations: HTML content for the info window, latitude, longitude
+    var locations = [
+      ['<h1>Aurora Borealis</h1>' + '<center><img src="aurora.jpg" alt="Aurora Borealis" style="width:200px;height:100px;"</img></center>' +'<p>The <b>Aurora Borealis (Northern Lights)</b> and the <b>Aurora Australis (Southern Lights)</b> are the results of electrons colliding in Earth’s upper atmosphere. See this amazing light show from locations in Alaska, Canada, and Iceland.</p>'
+		, 64.126521, -21.817439],
+      ['<h1>The Harbor of Rio de Janeiro</h1>' + '<center><img src="rio.jpg" alt="Harbor of Rio de Janeiro" style="width:200px;height:100px;"</img></center>' + '<p> <b>The Harbor of Rio de Janeiro</b> is a large bay that stretches 20 miles inland. The bay is surrounded by the <b>Serra do Mar</b> mountain range, which is made up by gneiss and granite rocks. Currently, the city of Rio de Janeiro is home to the 2016 Summer Olympics.</p>' 
+		, -22.906847, -43.172896],
+      ['<h1>The Grand Canyon</h1>' + '<center><img src="grand.jpg" alt="Hiking" style="width:200px;height:100px;"</img></center>' + '<p> The <b>Grand Canyon</b> is truly a natural wonder of the world with its spectacular views and history. Carved out by the <b>Colorado River</b>, the Grand Canyon is a one-mile deep gorge that stretches through Grand Canyon National Park in northern Arizona. The canyon is home to a variety of flora and fauna as well as one of America’s best whitewater rivers.</p>', 36.054445, -112.140111],
+      ['<h1>The Great Barrier Reef</h1>' + '<center><img src="barrier.jpg" alt="Great Barrier Reef" style="width:200px;height:100px;"</img></center>' + '<p>Located off the northeast coast of Australia, the <b>Great Barrier Reef</b> is home to some 2,500 individual reefs as well as over 900 islands. The reef is also known for its vast biodiversity, being home to over 1,500 species of fish and 400 species of coral.</p>', -18.156290, 147.485962],
+      ['<h1>Mount Everest</h1>' + '<center><img src="everest.jpg" alt="Mount Everest" style="width:200px;height:100px;"</img></center>' + '<p><b>Mount Everest</b> stands at a staggering 29,029 feet (8,848 meters) above sea level in the <b>Mahalangar</b> section of the <b>Himalayas</b>. Situated at the border of Nepal and China, Mount Everest has attracted over 5,000 climbers in its history. Climbers usually enlist <b>sherpas</b>, who are experienced climbers that do all of the work from marking the path to hooking up each climber’s safety equipment. The first team to successfully climb Mount Everest was <b>Edmund Hillary</b> and <b>Tenzing Norgay</b>.</p>', 27.987850, 86.925026],
+	  ['<h1>Victoria Falls</h1>' + '<center><img src="victoria.jpg" alt="Victoria Falls" style="width:200px;height:100px;"</img></center>' + '<p>At the point where the <b>Zambezi River</b> reaches a diameter of 1.25 miles, <b>Victoria Falls</b> can be found cascading over the edge of a large basalt plateau. Victoria Falls can be accessed either from <b>Zimbabwe</b> or <b>Zambia</b>. Daring tourists may even pay a visit to <b>Devil’s Pool</b>, situated right at the edge of the falls before the water plunges 350 feet to the bottom.</p>', -17.931805, 25.825558],
+	  ['<h1>Lauterbrunnen Valley</h1>' + '<center><img src="lauterbrunnen.jpg" alt="Lauterbrunnen Valley" style="width:200px;height:100px;"</img></center>' + '<p><b>Lauterbrunnen Valley</b> is situated in between the <b>Swiss Alps</b>. The valley allows tourists to access some of Switzerland’s most impressive peaks, including the <b>Schilthorn</b> and <b>Jungfraujoch</b>. Enjoy the peace and serenity of the surrounding Swiss villages from the extensive system of cable cars or from a hike on one of the trails.</p>' 
+		, 46.5935, 7.9091],
+	  ['<h1>Lake Hillier</h1>' + '<center><img src="hillier.jpg" alt="Lake Hillier" style="width:200px;height:100px;"</img></center>' + '<p> <b>Lake Hillier</b> is located on the southern edge of <b>Western Australia</b> and is known for its pink color. Scientists are not sure of its pink origin, but hypotheses include the presence of microalgae or bacteria. In fact, Lake Hillier is not the only pink lake in the world or in Australia.</p>' 
+		, -34.095000, 123.202778],
+	  ['<h1>Yellowstone National Park</h1>' + '<center><img src="yellowstone.jpg" alt="Yellowstone National Park" style="width:200px;height:100px;"</img></center>' + '<p><b>Yellowstone National Park</b> is famous for not only being the world’s first national park, but for its plethora of canyons, geysers, and forests. This lush scenery owes its looks to a volcanic hot spot. Yellowstone is situated atop a hotspot, which has not erupted for at least 640,000 years.</p>', 44.427968, -110.588454],
+	  ['<h1>Lascaux Caves</h1>' + '<center><img src="lascaux.jpg" alt="Lascaux Caves" style="width:200px;height:100px;"</img></center>' + '<p>The <b>Lascaux Caves</b>, located in southwestern France, are famous for their <b>Paleolithic</b> cave paintings. These paintings are up to 20,000 years old and are recognized for their detail and size.</p>', 45.0539, 1.1677],
+	  ['<h1>Parícutin</h1>' + '<center><img src="paricutin.jpg" alt="Paricutin" style="width:200px;height:100px;"</img></center>' + '<p> <b>Parícutin</b> is a dormant volcano located in the Mexican state of Michoacán. Parícutin confused onlookers during its eruption in 1943 when the small hill in the middle of a cornfield began to produce ash and smoke. The eruption nearly destroyed the town of Parícutin, from which the volcano took its name.</p>', 19.415825, -102.319094]
+    ];
+    
+    // Setup the different icons and shadows
+    var iconURLPrefix = 'http://maps.google.com/mapfiles/ms/icons/';
+    
+    var icons = [
+      iconURLPrefix + 'red-dot.png',
+      iconURLPrefix + 'green-dot.png',
+      iconURLPrefix + 'blue-dot.png',
+      iconURLPrefix + 'orange-dot.png',
+      iconURLPrefix + 'purple-dot.png',
+      iconURLPrefix + 'pink-dot.png',      
+      iconURLPrefix + 'yellow-dot.png'
+    ]
+    var iconsLength = icons.length;
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 10,
+      center: new google.maps.LatLng(-37.92, 151.25),
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      mapTypeControl: false,
+      streetViewControl: false,
+      panControl: false,
+      zoomControlOptions: {
+         position: google.maps.ControlPosition.LEFT_BOTTOM
+      }
+    });
+
+    var infowindow = new google.maps.InfoWindow({
+      maxWidth: 500
+    });
+
+    var markers = new Array();
+    
+    var iconCounter = 0;
+    
+    // Add the markers and infowindows to the map
+    for (var i = 0; i < locations.length; i++) {  
+      var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map,
+        icon: icons[iconCounter]
+      });
+
+      markers.push(marker);
+
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+      
+      iconCounter++;
+      // We only have a limited number of possible icon colors, so we may have to restart the counter
+      if(iconCounter >= iconsLength) {
+      	iconCounter = 0;
+      }
+    }
+
+    function autoCenter() {
+      //  Create a new viewpoint bound
+      var bounds = new google.maps.LatLngBounds();
+      //  Go through each...
+      for (var i = 0; i < markers.length; i++) {  
+				bounds.extend(markers[i].position);
+      }
+      //  Fit these bounds to the map
+      map.fitBounds(bounds);
+    }
+    autoCenter();
+  </script> 
+  <!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-4" id="center-this">
+                        <h3>Around the Web</h3>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; MAAS 2016
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/freelancer.min.js"></script>
+
+</body>
+
+</html>
