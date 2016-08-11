@@ -104,14 +104,16 @@
   
   <script>
     // Define your locations: HTML content for the info window, latitude, longitude
-    var locations = [
-      ['<h1>Aurora Borealis</h1>' + '<center><img src="aurora.jpg" alt="Aurora Borealis" style="width:200px;height:100px;"</img></center>' +'<p>The <b>Aurora Borealis (Northern Lights)</b> and the <b>Aurora Australis (Southern Lights)</b> are the results of electrons colliding in Earth’s upper atmosphere. See this amazing light show from locations in Alaska, Canada, and Iceland.</p>'
+    
+    function initMap() {
+    	var locations = [
+	 ['<h1>Aurora Borealis</h1>' + '<center><img src="aurora.jpg" alt="Aurora Borealis" style="width:200px;height:100px;"</img></center>' +'<p>The <b>Aurora Borealis (Northern Lights)</b> and the <b>Aurora Australis (Southern Lights)</b> are the results of electrons colliding in Earth’s upper atmosphere. See this amazing light show from locations in Alaska, Canada, and Iceland.</p>'
 		, 64.126521, -21.817439],
-      ['<h1>The Harbor of Rio de Janeiro</h1>' + '<center><img src="rio.jpg" alt="Harbor of Rio de Janeiro" style="width:200px;height:100px;"</img></center>' + '<p> <b>The Harbor of Rio de Janeiro</b> is a large bay that stretches 20 miles inland. The bay is surrounded by the <b>Serra do Mar</b> mountain range, which is made up by gneiss and granite rocks. Currently, the city of Rio de Janeiro is home to the 2016 Summer Olympics.</p>' 
+	['<h1>The Harbor of Rio de Janeiro</h1>' + '<center><img src="rio.jpg" alt="Harbor of Rio de Janeiro" style="width:200px;height:100px;"</img></center>' + '<p> <b>The Harbor of Rio de Janeiro</b> is a large bay that stretches 20 miles inland. The bay is surrounded by the <b>Serra do Mar</b> mountain range, which is made up by gneiss and granite rocks. Currently, the city of Rio de Janeiro is home to the 2016 Summer Olympics.</p>' 
 		, -22.906847, -43.172896],
-      ['<h1>The Grand Canyon</h1>' + '<center><img src="grand.jpg" alt="Hiking" style="width:200px;height:100px;"</img></center>' + '<p> The <b>Grand Canyon</b> is truly a natural wonder of the world with its spectacular views and history. Carved out by the <b>Colorado River</b>, the Grand Canyon is a one-mile deep gorge that stretches through Grand Canyon National Park in northern Arizona. The canyon is home to a variety of flora and fauna as well as one of America’s best whitewater rivers.</p>', 36.054445, -112.140111],
-      ['<h1>The Great Barrier Reef</h1>' + '<center><img src="barrier.jpg" alt="Great Barrier Reef" style="width:200px;height:100px;"</img></center>' + '<p>Located off the northeast coast of Australia, the <b>Great Barrier Reef</b> is home to some 2,500 individual reefs as well as over 900 islands. The reef is also known for its vast biodiversity, being home to over 1,500 species of fish and 400 species of coral.</p>', -18.156290, 147.485962],
-      ['<h1>Mount Everest</h1>' + '<center><img src="everest.jpg" alt="Mount Everest" style="width:200px;height:100px;"</img></center>' + '<p><b>Mount Everest</b> stands at a staggering 29,029 feet (8,848 meters) above sea level in the <b>Mahalangar</b> section of the <b>Himalayas</b>. Situated at the border of Nepal and China, Mount Everest has attracted over 5,000 climbers in its history. Climbers usually enlist <b>sherpas</b>, who are experienced climbers that do all of the work from marking the path to hooking up each climber’s safety equipment. The first team to successfully climb Mount Everest was <b>Edmund Hillary</b> and <b>Tenzing Norgay</b>.</p>', 27.987850, 86.925026],
+      	['<h1>The Grand Canyon</h1>' + '<center><img src="grand.jpg" alt="Hiking" style="width:200px;height:100px;"</img></center>' + '<p> The <b>Grand Canyon</b> is truly a natural wonder of the world with its spectacular views and history. Carved out by the <b>Colorado River</b>, the Grand Canyon is a one-mile deep gorge that stretches through Grand Canyon National Park in northern Arizona. The canyon is home to a variety of flora and fauna as well as one of America’s best whitewater rivers.</p>', 36.054445, -112.140111],
+      	['<h1>The Great Barrier Reef</h1>' + '<center><img src="barrier.jpg" alt="Great Barrier Reef" style="width:200px;height:100px;"</img></center>' + '<p>Located off the northeast coast of Australia, the <b>Great Barrier Reef</b> is home to some 2,500 individual reefs as well as over 900 islands. The reef is also known for its vast biodiversity, being home to over 1,500 species of fish and 400 species of coral.</p>', -18.156290, 147.485962],
+      	['<h1>Mount Everest</h1>' + '<center><img src="everest.jpg" alt="Mount Everest" style="width:200px;height:100px;"</img></center>' + '<p><b>Mount Everest</b> stands at a staggering 29,029 feet (8,848 meters) above sea level in the <b>Mahalangar</b> section of the <b>Himalayas</b>. Situated at the border of Nepal and China, Mount Everest has attracted over 5,000 climbers in its history. Climbers usually enlist <b>sherpas</b>, who are experienced climbers that do all of the work from marking the path to hooking up each climber’s safety equipment. The first team to successfully climb Mount Everest was <b>Edmund Hillary</b> and <b>Tenzing Norgay</b>.</p>', 27.987850, 86.925026],
 	  ['<h1>Victoria Falls</h1>' + '<center><img src="victoria.jpg" alt="Victoria Falls" style="width:200px;height:100px;"</img></center>' + '<p>At the point where the <b>Zambezi River</b> reaches a diameter of 1.25 miles, <b>Victoria Falls</b> can be found cascading over the edge of a large basalt plateau. Victoria Falls can be accessed either from <b>Zimbabwe</b> or <b>Zambia</b>. Daring tourists may even pay a visit to <b>Devil’s Pool</b>, situated right at the edge of the falls before the water plunges 350 feet to the bottom.</p>', -17.931805, 25.825558],
 	  ['<h1>Lauterbrunnen Valley</h1>' + '<center><img src="lauterbrunnen.jpg" alt="Lauterbrunnen Valley" style="width:200px;height:100px;"</img></center>' + '<p><b>Lauterbrunnen Valley</b> is situated in between the <b>Swiss Alps</b>. The valley allows tourists to access some of Switzerland’s most impressive peaks, including the <b>Schilthorn</b> and <b>Jungfraujoch</b>. Enjoy the peace and serenity of the surrounding Swiss villages from the extensive system of cable cars or from a hike on one of the trails.</p>' 
 		, 46.5935, 7.9091],
@@ -123,6 +125,7 @@
     ];
     
     // Setup the different icons and shadows
+   
     var iconURLPrefix = 'http://maps.google.com/mapfiles/ms/icons/';
     
     var icons = [
@@ -178,6 +181,7 @@
       if(iconCounter >= iconsLength) {
       	iconCounter = 0;
       }
+    }
     }
 
     function autoCenter() {
