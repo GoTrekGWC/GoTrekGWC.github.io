@@ -509,6 +509,7 @@ fieldset[disabled] .btn-success.active {
 .carousel-inner> .item> a> img{
 	width: 70%;
 	margin: auto;
+	color: white;
 }
 #center-this{ 
 	float: none;
@@ -722,3 +723,5 @@ border-radius: 0px;
 #forum2 {
 	color: white;
 }
+
+
