@@ -712,11 +712,8 @@ border-radius: 0px;
 	color:white;
 }
 
-#forumbackground {
-	background: url("../img/flower1.jpg")
-}
-
 #forum {
+	background: url("../img/flower1.jpg")
 	color:gray;
 }
 
