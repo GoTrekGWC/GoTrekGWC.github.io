@@ -3,7 +3,7 @@
 <head> 
   <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
   <title>Places to Go</title>
-  <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+  <script src="https://maps.google.com/maps/api/js?sensor=false"></script>
   <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -69,7 +69,6 @@
 									<li><a href="testoutandabout.html">Out and About</a></li>
 									<li><a href="index.html#portfolio">Road Trip</a></li>
 									<li><a href="index.html#portfolio">Dare</a></li>
-									<li><a href="placesNew.html">gØTrek's Picks</a></li>
 								</ul>
 							</li>
 							<li><a href="about.html">About</a></li>
@@ -194,7 +193,7 @@
       var bounds = new google.maps.LatLngBounds();
       //  Go through each...
       for (var i = 0; i < markers.length; i++) {  
-				bounds.extend(markers[i].position);
+	bounds.extend(markers[i].position);
       }
       //  Fit these bounds to the map
       map.fitBounds(bounds);
@@ -203,7 +202,7 @@
   </script> 
   <script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiQM_lK3o9OEAqXPszhLuepL-pfr-SR1c&callback=initMap">
-   </script>
+  </script>
   <!-- Footer -->
     <footer class="text-center">
         <div class="footer-above">
