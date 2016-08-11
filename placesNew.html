@@ -137,6 +137,11 @@
       		iconURLPrefix + 'yellow-dot.png'
     	]
     	var iconsLength = icons.length;
+    	
+    	var map = new google.maps.Map(mapDiv, {
+            center: {lat: 44.540, lng: -78.546},
+            zoom: 2
+        });
 
     	var map = new google.maps.Map(document.getElementById('map'), {
       		zoom: 2,
