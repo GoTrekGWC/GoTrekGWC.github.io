@@ -706,7 +706,7 @@ border-radius: 0px;
 }
 
 #forumbackground {
-	background: url("../img/flower1.jpg")
+	background: url("../img/flower1.jpg");
 }
 
 #forum {
@@ -715,4 +715,7 @@ border-radius: 0px;
 
 #forum2 {
 	color: white;
+}
+#outandaboutbackground{
+	background: url("../img/portfolio/outandabouotback.jpg");
 }
